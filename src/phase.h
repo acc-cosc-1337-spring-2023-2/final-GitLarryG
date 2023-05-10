@@ -10,29 +10,20 @@
 #include "shooter.h"
 
 
-#ifndef PHASE_H
-#define PHASE_H
+#ifndef PHASE
+#define PHASE
 
-class RollOutcome {
-    public:
-        enum class Value {natural, craps, point, seven_out, nopoint};
-        RollOutcome(Value v) : value(v) {}
-        Value get_value() const {return value;}
-    private:
-        Value value;
+enum class RollOutcome {
+    natural,
+    craps,
+    point,
+    seven_out,
+    nopoint
 };
 
-class ComeOutPhase {
+class Phase {
     public:
-        RollOutcome get_outcome(Roll* roll);
-};
-
-class PointPhase {
-    public:
-        PointPhase(int p) : point(p) {}
-        RollOutcome get_outcome(Roll* roll, int point_value);
-    private:
-        int point;
+        virtual RollOutcome get_outcome(Roll* roll, int point_value) = 0;
 };
 
 #endif
