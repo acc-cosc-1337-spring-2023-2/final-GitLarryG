@@ -1,7 +1,4 @@
-//create an abstract Phase class that will be the base class for derived classes ComeOutPhase and PointPhase.
-
-//In phase.h file create an enum class RollOutcome with values natural, craps, point, seven_out, and nopoint
-
+//
 #include <iostream>
 #include <random>
 #include <ctime>

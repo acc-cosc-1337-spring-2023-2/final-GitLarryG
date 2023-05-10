@@ -48,7 +48,7 @@ int main()
 		roll = shooter.throw_die(die1, die2);
 	}
 
-	//Display rolled value with the text end of point phase
+
 	cout << "You rolled a " << roll->roll_value() << "\n" << "End of point phase!\n";
 
 	cout<< shooter;
