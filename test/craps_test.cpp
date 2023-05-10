@@ -35,7 +35,7 @@ TEST_CASE("Test Shooter class shoot function")
 	Die die1;
 	Die die2;
 	Shooter shooter;
-	Roll* roll = shooter.shoot(die1, die2);
+	Roll* roll = shooter.throw_die(die1, die2);
 	REQUIRE(roll->roll_value() >= 2);
 	REQUIRE(roll->roll_value() <= 12);
 }
@@ -45,9 +45,9 @@ TEST_CASE("Test ComeOutPhase get_outcome function returns natural, craps, or poi
 	Die die1;
 	Die die2;
 	Shooter shooter;
-	Roll* roll = shooter.shoot(die1, die2);
+	Roll* roll = shooter.throw_die(die1, die2);
 	ComeOutPhase come_out_phase;
-	RollOutcome roll_outcome = come_out_phase.get_outcome(roll, 0);
+	RollOutcome roll_outcome = come_out_phase.get_outcome(roll);
 	if (roll_outcome == RollOutcome::natural)
 	{
 		REQUIRE(roll_outcome == RollOutcome::natural);
@@ -67,9 +67,9 @@ TEST_CASE("Test PointPhase get_outcome function returns point, seven_out, or nop
 	Die die1;
 	Die die2;
 	Shooter shooter;
-	Roll* roll = shooter.shoot(die1, die2);
+	Roll* roll = shooter.throw_die(die1, die2);
 	PointPhase point_phase(roll->roll_value());
-	RollOutcome roll_outcome = point_phase.get_outcome(roll, roll->roll_value());
+	RollOutcome roll_outcome = point_phase.get_outcome(roll);
 	if (roll_outcome == RollOutcome::point)
 	{
 		REQUIRE(roll_outcome == RollOutcome::point);

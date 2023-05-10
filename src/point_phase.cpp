@@ -6,9 +6,9 @@
 
 PointPhase::PointPhase(int p) : point(p) {}
 
-RollOutcome PointPhase::get_outcome(Roll* roll, int point_value) {
+RollOutcome PointPhase::get_outcome(Roll* roll) {
     int roll_value = roll->roll_value();
-    if (roll_value == point_value) {
+    if (roll_value == point) {
         return RollOutcome::point;
     } else if (roll_value == 7) {
         return RollOutcome::seven_out;

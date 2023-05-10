@@ -6,7 +6,7 @@
 
 #include "come_out_phase.h"
 
-RollOutcome ComeOutPhase::get_outcome(Roll* roll, int point_value) {
+RollOutcome ComeOutPhase::get_outcome(Roll* roll) {
     int roll_value = roll->roll_value();
     if (roll_value == 7 || roll_value == 11)
     {

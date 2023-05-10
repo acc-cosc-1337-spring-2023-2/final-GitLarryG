@@ -23,7 +23,7 @@ enum class RollOutcome {
 
 class Phase {
     public:
-        virtual RollOutcome get_outcome(Roll* roll, int point_value) = 0;
+        virtual RollOutcome get_outcome(Roll* roll) = 0;
 };
 
 #endif

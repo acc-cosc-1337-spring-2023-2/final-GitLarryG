@@ -13,7 +13,7 @@
 class PointPhase : public Phase {
 public:
     PointPhase(int p);
-    RollOutcome get_outcome(Roll* roll, int point_value) override;
+    RollOutcome get_outcome(Roll* roll) override;
 private:
     int point;
 };

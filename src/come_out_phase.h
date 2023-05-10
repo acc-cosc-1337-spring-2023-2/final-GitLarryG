@@ -12,7 +12,7 @@
 
 class ComeOutPhase : public Phase {
     public:
-        RollOutcome get_outcome(Roll* roll, int point_value) override;
+        RollOutcome get_outcome(Roll* roll) override;
 };
 
 

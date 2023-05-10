@@ -10,7 +10,7 @@
 
 class Shooter {
     public:
-        Roll* shoot(Die& die1, Die& die2);
+        Roll* throw_die(Die& die1, Die& die2);
         friend std::ostream& operator<<(std::ostream& out, const Shooter& s);
         ~Shooter();
     private:
